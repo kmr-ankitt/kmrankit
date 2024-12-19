@@ -32,8 +32,8 @@ export default function Header() {
   isKeyPressed();
 
   return (
-    <div className="flex items-center justify-between p-5">
-      <div className="flex items-center gap-4">
+    <div className="flex items-center justify-between m-5">
+      <div className="flex items-center gap-4 lowercase">
         {routes.map((item, index) => (
           <Link href={item.route} key={index}>
             {"[" + item.name[0] + "] " + item.name}
