@@ -5,6 +5,7 @@ import { ModeToggle } from "./ModeToggle";
 import { usePathname, useRouter } from "next/navigation";
 import { motion } from "framer-motion";
 import { cn } from "@/lib/utils";
+import { useEffect } from "react";
 
 const routes = [
   {
@@ -23,17 +24,22 @@ export default function Header() {
   const pathname = usePathname();
 
   function isKeyPressed() {
-    window.addEventListener("keydown", (e) => {
-      if (e.key === "h") {
-        e.preventDefault();
-        router.push("/");
-      } else if (e.key === "p") {
-        e.preventDefault();
-        router.push("/projects");
-      }
-    });
+    if (typeof window !== "undefined") {
+      window.addEventListener("keydown", (e) => {
+        if (e.key === "h") {
+          e.preventDefault();
+          router.push("/");
+        } else if (e.key === "p") {
+          e.preventDefault();
+          router.push("/projects");
+        }
+      });
+    }
   }
-  isKeyPressed();
+
+  useEffect(() => {
+    isKeyPressed();
+  }, []);
 
   return (
     <div className="flex items-center justify-between m-5">
