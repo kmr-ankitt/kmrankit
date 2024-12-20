@@ -1,19 +1,24 @@
-import { fetchPinnedRepositories, fetchRepositoryDescriptions, Repository } from "@/api/fetchRepo";
+import {
+  fetchPinnedRepositories,
+  fetchRepositoryDescriptions,
+  Repository,
+} from "@/api/fetchRepo";
 import Link from "next/link";
+import { ArrowUpRight } from "lucide-react";
 
 export default async function SelectedProjects() {
-  const pinnedItems : Repository[] = await fetchPinnedRepositories();
+  const pinnedItems: Repository[] = await fetchPinnedRepositories();
   const topItems = pinnedItems.slice(0, 3);
   const repoDesc = await fetchRepositoryDescriptions(topItems);
 
   return (
     <div className="flex flex-col gap-10 my-10 ">
       <h1 className="text-2xl font-extrabold">Selected Projects</h1>
-      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 ">
         {topItems.map((item: Repository, index: number) => (
           <div
             key={item.id}
-            className="p-4 border rounded-md shadow-md hover:shadow-lg transition-shadow duration-300"
+            className="p-4 border rounded-md shadow-md hover:shadow-lg duration-300 hover:text-[#ff6b35] transition-all"
           >
             <Link href={item.url}>
               <div className="flex items-center gap-2">
@@ -37,6 +42,15 @@ export default async function SelectedProjects() {
             </Link>
           </div>
         ))}
+      </div>
+      <div>
+        <Link
+          href={"/projects"}
+          className="text-base w-fit flex items-end group hover:underline hover:underline-offset-4 gap-2 hover:text-[#ff6b35] transition-all duration-300"
+        >
+          see all
+          <ArrowUpRight className="w-5 h-5 transition-transform duration-300 group-hover:translate-x-1 group-hover:-translate-y-1" />
+        </Link>
       </div>
     </div>
   );
