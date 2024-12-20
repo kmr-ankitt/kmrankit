@@ -17,7 +17,7 @@ export default function Hero() {
           <p>CGU, Bhubaneswar</p>
         </div>
       </div>
-      <div>
+      <div className="w-12/12">
         <p className="font-extralight leading-relaxed ">
           I&apos;m a {age} year old CS undergrad. I love building fullstack web
           applications, low level stuffs or anything that interests me. My day
