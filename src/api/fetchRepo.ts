@@ -62,7 +62,7 @@ export const fetchPinnedRepositories = async () => {
   return user.pinnedItems.edges.map((edge: { node: unknown }) => edge.node);
 };
 
-export const fetchRepositoryDescriptions = async (pinnedItems: Repository[]) => {
+export const fetchRepositoryDescriptions = async (pinnedItems: Repository[]) : Promise<string[]> => {
   const octokit = new Octokit({
     auth: process.env.GITHUB_TOKEN,
   });
@@ -77,7 +77,9 @@ export const fetchRepositoryDescriptions = async (pinnedItems: Repository[]) => 
     })
   );
 
-  return repoDescription.map((item) => item.description);
+  return repoDescription
+    .filter((item) => item.description !== null)
+    .map((item) => item.description as string);
 };
 
 export const fetchRepoTags = async (pinnedItems: Repository[]) => {
