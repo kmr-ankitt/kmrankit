@@ -10,7 +10,7 @@ const socials: { [key: string]: string } = {
 
 export default function Links() {
   return (
-    <div className="lowercase my-10 flex flex-col gap-10 m-7">
+    <div className="lowercase my-10 flex flex-col gap-5 m-7">
       <h1 className="text-2xl font-extrabold"><span className="text-[#ff6b35]">{">"}</span> Links</h1>
       <div className="flex flex-wrap gap-3">
         {Object.keys(socials).map((key) => (
