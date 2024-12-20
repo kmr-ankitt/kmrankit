@@ -30,8 +30,8 @@ export default async function SelectedProjects() {
                 </svg>
                 <h2 className="text-lg font-semibold mb-2">{item.name}</h2>
               </div>
-              <p className="text-gray-600 mb-4">{repoDesc[index]}</p>
-              <p className="text-sm text-gray-500">
+              <p className="text-gray-500 mb-4">{repoDesc[index]}</p>
+              <p className="text-sm text-gray-400">
                 ⭐ {item.stargazers.totalCount} stars
               </p>
             </Link>
