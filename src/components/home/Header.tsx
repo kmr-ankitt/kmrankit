@@ -1,11 +1,11 @@
 "use client";
 
 import Link from "next/link";
-import { ModeToggle } from "./ModeToggle";
 import { usePathname, useRouter } from "next/navigation";
 import { motion } from "framer-motion";
 import { cn } from "@/lib/utils";
 import { useEffect } from "react";
+import { ModeToggle } from "./ModeToggle";
 
 const routes = [
   {
