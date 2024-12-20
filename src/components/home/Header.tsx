@@ -59,7 +59,7 @@ export default function Header() {
                 {"[" + item.name[0] + "] " + item.name}
                 {item.route === pathname ? (
                   <motion.div
-                    className="absolute inset-0 top-7 z-[-1] mx-2 h-[1px] bg-neutral-400 from-transparent to-neutral-900 dark:bg-neutral-400 dark:bg-gradient-to-r"
+                    className="absolute inset-0 top-7 z-[-1] mx-2 h-[1px] bg-[#ff6b35]"
                     layoutId="sidebar"
                     transition={{
                       type: "spring",
