@@ -12,16 +12,15 @@ export default async function SelectedProjects() {
   const topItems = pinnedItems.slice(0, 3);
   const repoDesc = await fetchRepositoryDescriptions(topItems);
   const repoTags = await fetchRepoTags(topItems);
-  console.log(repoTags);
 
   return (
     <div className="flex flex-col gap-10 my-10 lowercase">
-      <h1 className="text-2xl font-extrabold">code</h1>
+      <h1 className="text-2xl font-extrabold">projects</h1>
       <div className="grid grid-cols-1  gap-6 ">
         {topItems.map((item: Repository, index: number) => (
           <div
             key={item.id}
-            className="p-4 border rounded-md shadow-md hover:shadow-lg duration-300 group transition-all"
+            className="p-4 border rounded-md shadow-md hover:shadow-lg hover:dark:border-zinc-500 duration-300 group transition-all"
           >
             <Link href={item.url}>
               <div className="flex items-center gap-2">
