@@ -42,8 +42,8 @@ export default function Header() {
   }, []);
 
   return (
-    <div className="flex items-center justify-between m-5">
-      <div className="flex items-center gap-4 lowercase">
+    <div className="flex items-center justify-between m-3 pt-5">
+      <div className="flex items-center gap-4 lowercase text-base">
         {routes.map((item, index) => {
           const isActive = item.route === pathname;
           return (
@@ -56,10 +56,10 @@ export default function Header() {
               )}
             >
               <span className="relative px-2 py-[.20rem]">
-                {item.name}
+                {"[" + item.name[0] + "] " + item.name}
                 {item.route === pathname ? (
                   <motion.div
-                    className="absolute inset-0 top-7 z-[-1] mx-2 h-[1px] bg-neutral-200 from-transparent to-neutral-900 dark:bg-neutral-800 dark:bg-gradient-to-r"
+                    className="absolute inset-0 top-7 z-[-1] mx-2 h-[1px] bg-neutral-400 from-transparent to-neutral-900 dark:bg-neutral-400 dark:bg-gradient-to-r"
                     layoutId="sidebar"
                     transition={{
                       type: "spring",
