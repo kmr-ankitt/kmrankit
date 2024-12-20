@@ -32,7 +32,7 @@ export default async function SelectedProjects() {
       <div>
         <Link
           href="/projects"
-          className="text-base w-fit flex items-end group hover:underline hover:underline-offset-4 gap-2 hover:text-[#ff6b35] transition-all duration-300"
+          className="text-base w-fit flex items-center group hover:underline hover:underline-offset-4 gap-2 hover:text-[#ff6b35] transition-all duration-300"
         >
           see all
           <ArrowUpRight className="w-5 h-5 transition-transform duration-300 group-hover:translate-x-1 group-hover:-translate-y-1" />

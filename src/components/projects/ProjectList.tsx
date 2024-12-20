@@ -26,7 +26,6 @@ export default async function SelectedProjects() {
           ))}
         </div>
       </div>
-      <div></div>
     </div>
   );
 }
