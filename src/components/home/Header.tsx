@@ -39,7 +39,7 @@ export default function Header() {
 
   useEffect(() => {
     isKeyPressed();
-  }, []);
+  });
 
   return (
     <div className="flex items-center justify-between m-3 mx-5 pt-5">
