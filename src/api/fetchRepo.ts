@@ -79,3 +79,21 @@ export const fetchRepositoryDescriptions = async (pinnedItems: Repository[]) => 
 
   return repoDescription.map((item) => item.description);
 };
+
+export const fetchRepoTags = async (pinnedItems: Repository[]) => {
+  const octokit = new Octokit({
+    auth: process.env.GITHUB_TOKEN,
+  });
+
+  const repoTags = await Promise.all(
+    pinnedItems.map(async (item) => {
+      const { data } = await octokit.request("GET /repos/{owner}/{repo}/topics", {
+        owner: "kmr-ankitt",
+        repo: item.name,
+      });
+      return data;
+    })
+  );
+
+  return repoTags.map((item) => item.names);
+}
