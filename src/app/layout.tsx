@@ -28,12 +28,14 @@ export default function RootLayout({
   return (
     <html lang="en" suppressHydrationWarning>
       <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased font-mono`}
+        className={`${geistSans.variable} ${geistMono.variable} antialiased font-mono flex justify-center items-center`}
       >
       <ThemeProvider attribute="class" defaultTheme="dark" enableSystem disableTransitionOnChange>  
+        <div className="max-w-screen-md">
         <Header />
         {children}
         <Links />
+        </div>
       </ThemeProvider>
       </body>
     </html>
