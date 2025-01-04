@@ -42,7 +42,7 @@ export default function Header() {
   });
 
   return (
-    <div className="flex items-center justify-between m-3 mx-5 pt-5">
+    <div className="flex items-center justify-between m-3 mx-5 pt-5 mb-10">
       <div className="flex items-center gap-3 lowercase text-base">
         {routes.map((item, index) => {
           const isActive = item.route === pathname;
