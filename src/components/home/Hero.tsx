@@ -7,7 +7,7 @@ export default function Hero() {
 
   return (
     <div className="lowercase flex flex-col gap-5 mb-8">
-        <HyperText duration={1200} animateOnHover={false} className="font-bold text-2xl">Ankit Kumar Sahu</HyperText>
+        <HyperText duration={600} animateOnHover={false} className="font-bold text-2xl">Ankit Kumar Sahu</HyperText>
       <div className="flex flex-col gap-1">
         <div className="flex items-center gap-4">
           <MapPin className="w-4 h-4" />
@@ -20,7 +20,7 @@ export default function Hero() {
       </div>
       <div className="w-12/12">
         <p className="font-light leading-relaxed ">
-          I&apos;m a {age} year old CS undergrad. I love building fullstack web
+          I&apos;m a {age} year old CS undergrad. I love building fullstack web and crossplatform
           applications, low level stuffs or anything that interests me. My day
           starts and ends with the terminal.
         </p>

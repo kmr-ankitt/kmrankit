@@ -9,7 +9,7 @@ export default function page() {
       <div className="md:w-screen max-w-screen-lg mx-auto flex items-center gap-2">
         <span className="text-[#ff6b35] text-2xl font-bold">{">"}</span>
         <HyperText
-          duration={1200}
+          duration={500}
           animateOnHover={false}
           className="font-bold text-2xl"
         >
