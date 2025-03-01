@@ -4,9 +4,9 @@ import Link from "next/link";
 const socials: { [key: string]: string } = {
   mail: "mailto:sahuankit.murhu@gmail.com",
   github: "https://www.github.com/kmr-ankitt",
-  linkedin: "https://www.linkedin.com/in/kmr-ankit/",
+  linkedin: "https://www.linkedin.com/in/kmrankitt/",
   leetcode: "https://leetcode.com/kmrankit/",
-  twitter: "https://x.com/kmr_ankitt",
+  twitter: "https://x.com/kmrankitt",
   insta: "https://instagram.com/kmrankitt",
 };
 
