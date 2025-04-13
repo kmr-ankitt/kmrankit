@@ -31,7 +31,7 @@ export default function RootLayout({
         className={`${geistSans.variable} ${geistMono.variable} antialiased font-mono flex justify-center items-center`}
       >
       <ThemeProvider attribute="class" defaultTheme="dark" enableSystem disableTransitionOnChange>  
-        <div className="max-w-screen-md">
+        <div className="max-w-screen-lg">
         <Header />
         {children}
         <Links />
