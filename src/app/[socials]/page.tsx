@@ -8,6 +8,7 @@ const socials: { [key: string]: string } = {
   twitter: "https://x.com/kmrankitt",
   instagram: "https://instagram.com/kmrankitt",
   insta: "https://instagram.com/kmrankitt",
+  resume: "/resume.pdf",
 };
 
 type Socials = keyof typeof socials;
