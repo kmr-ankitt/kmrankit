@@ -8,7 +8,7 @@ const socials: { [key: string]: string } = {
   leetcode: "https://leetcode.com/kmrankit/",
   twitter: "https://x.com/kmrankitt",
   insta: "https://instagram.com/kmrankitt",
-  resume: "/resume.pdf"
+  resume: "/myresume.pdf"
 };
 
 export default function Links() {
