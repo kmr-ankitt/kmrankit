@@ -1,10 +1,10 @@
 import { redirect } from 'next/navigation';
 
-interface PageProps {
-  params: { reponame: string };
-}
+type PageProps = {
+  params: Promise<{ reponame: string }>
+};
 
-export default function Page({ params }: PageProps) {
-  redirect(`https://github.com/kmr-ankitt/${params.reponame}`);
-  return null;
+export default async function Page({ params }: PageProps) {
+  const param =  await params;
+  redirect(`https://github.com/kmr-ankitt/${param.reponame}`);
 }
